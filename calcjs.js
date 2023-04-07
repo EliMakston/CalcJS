@@ -1,5 +1,5 @@
 "use strict";
-function deriv(x, func) {
+export function deriv(x, func) {
   const small = 1e-15;
   const x1 = x - small;
   const x2 = x + small;
@@ -12,7 +12,7 @@ function deriv(x, func) {
     return slope;
   }
 }
-function integral(x1, x2, func) {
+export function integral(x1, x2, func) {
   const small = 1e-6;
   let sum = 0;
   for (let x = x1; x < x2; ) {
@@ -21,8 +21,3 @@ function integral(x1, x2, func) {
   }
   return sum;
 }
-console.log(integral(0, Math.PI, y));
-function y(x) {
-  return Math.sin(x);
-}
-//# sourceMappingURL=index.js.map
